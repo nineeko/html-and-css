@@ -49,9 +49,33 @@
         #div-test1 + div{
             background: pink;
         }
-        #div-test2 ~ div {
-            background :purple;
-         }
+        /*#div-test2 ~ div {*/
+        /*    background :purple;*/
+        /* }*/
+        /* 반응 선택자 */
+        #active-test, #hover-test{
+            width: 150px;
+            height: 150px;
+            background: orange;
+        }
+        /* 이벤트 관련 가상 선택자 : active */
+        #hover-test:hover{
+            background: yellow;
+            color: white;
+        }
+        input[type=checkbox]:checked{
+            width: 50px;
+            height: 50px;
+        }
+        #userId:focus, #userPwd:focus{
+            background: hotpink;
+        }
+        option:disabled{
+            background: red;
+        }
+        option:enabled{
+            background: green;
+        }
     </style>
 </head>
 <body>
@@ -114,13 +138,13 @@
 <input type="checkbox" name="fruits" value="복숭아" id="peach">
 <label for="peach">복숭아</label>
 <hr>
-<p>초점이 맞추어진 input태그 선택</p>
+<p>초점이 맞추어진 input 태그 선택</p>
 <label for="userId">아이디: </label>
 <input type="text" id="userId" placeholder="아이디를 입력하세요"><br>
 <label for="userPwd">패스워드: </label>
 <input type="password" id="userPwd" placeholder="비밀번호를 입력하세요"><br>
-<p>사용 가능한 input태그선택</p>
-<pre>태그:enabled{설정내용}, 태그:disabled{설정내용}</pre>
+<p>사용 가능한 input 태그 선택</p>
+<pre>태그:enabled{설정 내용}, 태그:disabled{설정 내용}</pre>
 <h3>당신의 연령대는?</h3>
 <select>
     <option value="10" disabled>10대</option>
